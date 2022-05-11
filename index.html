@@ -10,7 +10,14 @@
     <title>Image Gallery</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/icons/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/icons/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/icons/favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="src/assets/icons/favicon/favicon.ico" />
+    <link rel="manifest" href="src/assets/icons/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="src/assets/css/style.css" />
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -19,6 +26,54 @@
       </p>
     <![endif]-->
 
-    <script src="main.js" async defer></script>
+    <header>
+      <div class="header--lwrapper">
+        <img class="header--app-icon" src="src/assets/icons/logo/logo.svg" alt="App icon" />
+        <p class="header--app-name">Image gallery</p>
+      </div>
+      <div class="header--rwrapper">
+        <a class="header--link" href="https://github.com/akaAbdullahMateen/image-gallery" target="_blank" rel="noopener noreferrer">
+          <img src="src/assets/icons/misc/github.png" alt="Github icon" />
+        </a>
+      </div>
+    </header>
+    <main class="root">
+      <ul class="gallery">
+        <li class="slide">
+          <img class="slide--picture" src="https://d31wcbk3iidrjq.cloudfront.net/gxtdQlFH2_avatar-snpKtIVyV.png?h=360&w=300&q=100" />
+          <h2 class="slide--name">Fortune Feimster</h2>
+          <p class="slide--description">Actress - Comedian</p>
+          <input class="slide--scale" type="range" />
+          <menu class="slide--toolbar">
+            <li>
+              <button class="blur">
+                <img src="src/assets/icons/toolbar/blur.png" alt="Blur icon" />
+              </button>
+            </li>
+            <li>
+              <button class="brightness">
+                <img src="src/assets/icons/toolbar/brightness.png" alt="Brightness icon" />
+              </button>
+            </li>
+            <li>
+              <button class="contrast">
+                <img src="src/assets/icons/toolbar/contrast.png" alt="Contrast icon" />
+              </button>
+            </li>
+            <li>
+              <button class="grayscale">
+                <img src="src/assets/icons/toolbar/grayscale.png" alt="Grayscale icon" />
+              </button>
+            </li>
+            <li>
+              <button class="hue">
+                <img src="src/assets/icons/toolbar/hue.png" alt="Hue icon" />
+              </button>
+            </li>
+          </menu>
+        </li>
+      </ul>
+    </main>
+    <script src="src/scripts/main.js" defer></script>
   </body>
 </html>
