@@ -1,10 +1,5 @@
 [
   {
-    "profile_image": "https://d31wcbk3iidrjq.cloudfront.net/8VF6SrNzw_avatar-jowRSkmuT.jpg?h=320&w=300&q=100",
-    "talent_name": "Susie Essman",
-    "talent_profession": "HBO - Curb Your Enthusiasm"
-  },
-  {
     "profile_image": "https://d31wcbk3iidrjq.cloudfront.net/3QqE92EtG_avatar-FIWzNzi3w.jpg?h=320&w=300&q=100",
     "talent_name": "Brian Cox",
     "talent_profession": "Actor - Succession, X-Men, Bourne Supremacy"
@@ -148,5 +143,10 @@
     "profile_image": "https://d31wcbk3iidrjq.cloudfront.net/MdckbEzZy_35105081995_5d36db665a_k.jpg?h=320&w=300&q=100",
     "talent_name": "Fiona the Hippo",
     "talent_profession": "Animals - Cincinnati Zoo"
+  },
+  {
+    "profile_image": "https://d31wcbk3iidrjq.cloudfront.net/8VF6SrNzw_avatar-jowRSkmuT.jpg?h=320&w=300&q=100",
+    "talent_name": "Susie Essman",
+    "talent_profession": "HBO - Curb Your Enthusiasm"
   }
 ]
