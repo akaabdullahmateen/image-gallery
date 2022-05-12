@@ -197,7 +197,7 @@ header {
   height: 10px;
   background: var(--color-tertiary);
   border-radius: 5px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .slide--scale::-moz-range-progress {
@@ -211,6 +211,7 @@ header {
   transition: 0.1s;
 }
 
+.slide--scale:focus::-moz-range-thumb,
 .slide--scale:hover::-moz-range-thumb {
   transform: scale(1.2);
   border: 2px solid var(--color-primary);
@@ -220,20 +221,22 @@ header {
 
 .slide--toolbar {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   margin-top: auto;
 }
 
 .slide--toolbar button {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
 }
 
-.slide--toolbar button:hover {
+.slide--toolbar button:focus,
+.slide--toolbar button:hover,
+.slide--toolbar button.active {
   background-color: var(--color-tertiary);
 }
 
