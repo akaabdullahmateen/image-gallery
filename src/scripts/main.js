@@ -33,13 +33,17 @@ async function populateSlides() {
 function initializeToolbar(slide) {
   const tools = slide.querySelectorAll(".slide--toolbar button");
   const scale = slide.querySelector(".slide--scale");
+  const maxValues = { blur: 20, brightness: 200, contrast: 200, grayscale: 100, huerotate: 360 };
+  const stepValues = { blur: 1, brightness: 10, contrast: 10, grayscale: 5, huerotate: 18 };
+  const defaultValues = { blur: 0, brightness: 100, contrast: 100, grayscale: 0, huerotate: 0 };
+  const filters = { blur: "blur", brightness: "brightness", contrast: "contrast", grayscale: "grayscale", huerotate: "hue-rotate" };
+  const units = { blur: "px", brightness: "%", contrast: "%", grayscale: "%", huerotate: "deg" };
 
   scale.addEventListener("input", () => {
     const activeTool = slide.querySelector(".active");
     const activeClass = activeTool.classList[0];
     const slidePicture = slide.querySelector(".slide--picture");
-    const filters = { blur: "blur", brightness: "brightness", contrast: "contrast", grayscale: "grayscale", huerotate: "hue-rotate" };
-    const units = { blur: "px", brightness: "%", contrast: "%", grayscale: "%", huerotate: "deg" };
+
     slidePicture.style.filter = `${filters[activeClass]}(${scale.value}${units[activeClass]})`;
   });
 
@@ -52,9 +56,6 @@ function initializeToolbar(slide) {
       const currentTool = e.currentTarget;
       currentTool.classList.add("active");
 
-      const maxValues = { blur: 20, brightness: 200, contrast: 200, grayscale: 100, huerotate: 360 };
-      const stepValues = { blur: 2, brightness: 20, contrast: 20, grayscale: 10, huerotate: 36 };
-      const defaultValues = { blur: 0, brightness: 100, contrast: 100, grayscale: 0, huerotate: 0 };
       const toolClass = currentTool.classList[0];
 
       scale.setAttribute("max", maxValues[toolClass]);
@@ -66,6 +67,7 @@ function initializeToolbar(slide) {
   }
 
   tools[0].classList.add("active");
+  scale.value = defaultValues["blur"];
 }
 
 function activateCarousel(index) {
